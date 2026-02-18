@@ -1,0 +1,10 @@
+<resources>
+    <!-- yang udah ada biarin -->
+    <string name="app_name">DearMusic</string>
+
+    <!-- WIDGET STRINGS -->
+    <string name="widget_dearmusic_label">DearMusic</string>
+    <string name="widget_cd_play_pause">Play/Pause</string>
+    <string name="widget_cd_next">Next</string>
+    <string name="facebook_app_id">ISI_DENGAN_APP_ID_KAMU</string>
+</resources>

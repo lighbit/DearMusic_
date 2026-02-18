@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/widget_bg_modern"
+    android:minHeight="48dp"
+    android:paddingStart="12dp"
+    android:paddingTop="6dp"
+    android:paddingEnd="12dp"
+    android:paddingBottom="6dp">
+
+    <!-- Konten utama -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- Artwork -->
+        <FrameLayout
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/artwork_clip_mask"
+            android:clipToOutline="true">
+
+            <ImageView
+                android:id="@+id/img_art"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+        </FrameLayout>
+
+        <!-- Teks + Kontrol -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Song Title"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_artist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Artist"
+                android:textColor="#CCFFFFFF"
+                android:textSize="12sp" />
+
+            <!-- Kontrol musik -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btn_prev"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/btn_transparent"
+                    android:src="@android:drawable/ic_media_previous"
+                    android:tint="@android:color/white" />
+
+                <ImageButton
+                    android:id="@+id/btn_toggle"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:background="@drawable/btn_circle"
+                    android:src="@android:drawable/ic_media_play"
+                    android:tint="@android:color/white" />
+
+                <ImageButton
+                    android:id="@+id/btn_next"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="12dp"
+                    android:background="@drawable/btn_transparent"
+                    android:src="@android:drawable/ic_media_next"
+                    android:tint="@android:color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 🔹 Watermark kecil di pojok kanan atas -->
+    <ImageView
+        android:id="@+id/img_watermark"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:alpha="0.5"
+        android:src="@drawable/ic_stat_notify" />
+</FrameLayout>
